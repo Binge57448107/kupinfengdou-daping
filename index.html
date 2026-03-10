@@ -10,14 +10,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--jarvis-blue:#00bfff;--jarvis-light:#87ceeb;--jarvis-glow:#00ffff}
 body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflow-x:hidden;position:relative}
-
-/* 动态星空背景 - 在最底层 */
 #starfield{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden;background:#0a0a1a}
 #starfield .star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;box-shadow:0 0 4px #fff;animation:twinkle 3s ease-in-out infinite}
 @keyframes twinkle{0%,100%{opacity:0.3}50%{opacity:1}}
 #starfield::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 20% 80%,rgba(0,100,200,0.15) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(138,43,226,0.1) 0%,transparent 50%);animation:pulse 8s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:1}}
-
 .container{position:relative;z-index:1;max-width:100%;padding:10px}
 .header{text-align:center;padding:10px 0;margin-bottom:10px;background:rgba(0,0,0,0.4);border-radius:10px;border:1px solid rgba(0,191,255,0.3)}
 .header h1{font-size:1.5rem;font-weight:700;letter-spacing:4px;color:#fff;text-shadow:0 0 20px var(--jarvis-blue)}
@@ -58,49 +55,48 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 </head>
 <body>
 <div id="starfield"></div>
-
 <div class="container">
 <div class="header"><h1>酷拼疯豆 运营数据实时看盘</h1></div>
 <div class="filters">
 <span>时间: <select><option>今天</option><option selected>本月</option><option>本年</option></select></span>
-<span>门店: <select><option selected>全部</option><option>东莞店</option><option>河源店</option></select></span>
+<span>门店: <select><option selected>全部</option><option>东莞记忆店</option><option>深圳怀德万象汇店</option></select></span>
 </div>
 
 <div class="kpi-section">
 <div class="kpi-section-title">📊 总体经营数据</div>
 <div class="kpi-row">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥817,251</div><div class="sub">营业收入: ¥734,526</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥179,677</div><div class="sub">营收: ¥161,709</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥6,417</div><div class="sub">营收: ¥5,775</div></div>
-<div class="kpi-card"><div class="label">平均进店率</div><div class="value">6.23%</div><div class="sub">日均进店: 238人</div></div>
-<div class="kpi-card"><div class="label">平均成交率</div><div class="value">5.82%</div><div class="sub">拼酷: 6.15%</div></div>
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥1,195,796</div><div class="sub">营业收入: ¥1,076,216</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥38,884</div><div class="sub">营收: ¥34,996</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value">¥17,848</div><div class="sub">营收: ¥16,063</div></div>
+<div class="kpi-card"><div class="label">今日销售额</div><div class="value">¥9,222</div><div class="sub">最新: 3月8日</div></div>
+<div class="kpi-card"><div class="label">平均成交率</div><div class="value">5.82%</div><div class="sub">待统计</div></div>
 <div class="kpi-card"><div class="label">盘点准确率</div><div class="value">98.50%</div><div class="sub">达标</div></div>
 <div class="kpi-card"><div class="label">大众点评</div><div class="value">4.0⭐</div><div class="sub">220条评价</div></div>
 </div>
 <div class="kpi-row kpi-row-3">
 <div class="kpi-card"><div class="label">人均单价(总计)</div><div class="value">¥38.50</div></div>
-<div class="kpi-card"><div class="label">人均单价(拼酷)</div><div class="value">¥42.30</div></div>
-<div class="kpi-card"><div class="label">人均单价(疯豆)</div><div class="value">¥32.80</div></div>
+<div class="kpi-card"><div class="label">东莞记忆店</div><div class="value">¥717,400</div></div>
+<div class="kpi-card"><div class="label">深圳怀德店</div><div class="value">¥478,396</div></div>
 </div>
 </div>
 
 <div class="kpi-section">
-<div class="kpi-section-title">🔴 疯豆品牌数据</div>
+<div class="kpi-section-title">🔴 深圳怀德万象汇店</div>
 <div class="kpi-row">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥342,945</div><div class="sub">营收: ¥308,650</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥75,464</div><div class="sub">营收: ¥67,918</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥2,695</div><div class="sub">营收: ¥2,425</div></div>
-<div class="kpi-card"><div class="label">销售占比</div><div class="value">42%</div><div class="sub">对比拼酷 58%</div></div>
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥478,396</div><div class="sub">营收: ¥430,556</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥16,435</div><div class="sub">营收: ¥14,792</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value">¥7,138</div><div class="sub">营收: ¥6,424</div></div>
+<div class="kpi-card"><div class="label">销售占比</div><div class="value">40%</div><div class="sub">对比东莞 60%</div></div>
 </div>
 </div>
 
 <div class="kpi-section">
-<div class="kpi-section-title">🔵 拼酷品牌数据</div>
+<div class="kpi-section-title">🔵 东莞记忆店</div>
 <div class="kpi-row">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥474,306</div><div class="sub">营收: ¥426,876</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥104,213</div><div class="sub">营收: ¥93,791</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥3,722</div><div class="sub">营收: ¥3,350</div></div>
-<div class="kpi-card"><div class="label">销售占比</div><div class="value">58%</div><div class="sub">对比疯豆 42%</div></div>
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥717,400</div><div class="sub">营收: ¥645,660</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥22,449</div><div class="sub">营收: ¥20,204</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value">¥10,707</div><div class="sub">营收: ¥9,636</div></div>
+<div class="kpi-card"><div class="label">销售占比</div><div class="value">60%</div><div class="sub">对比深圳 40%</div></div>
 </div>
 </div>
 
@@ -115,26 +111,26 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 <div class="main-row">
 <div class="section-card"><h3>月度营业额趋势</h3><div class="chart-box"><canvas id="monthlyChart"></canvas></div></div>
 <div class="section-card"><h3>门店目标完成率</h3>
-<div class="compare-bar"><div class="bar-pk" style="width:59.89%">59.89%</div></div>
-<div class="stat-row"><span class="label">本月目标</span><span class="value">¥300,000</span></div>
-<div class="stat-row"><span class="label">本月累计</span><span class="value">¥179,677</span></div>
-<div class="stat-row"><span class="label">完成进度</span><span class="value">59.89%</span></div>
+<div class="compare-bar"><div class="bar-pk" style="width:38.88%">38.88%</div></div>
+<div class="stat-row"><span class="label">本月目标</span><span class="value">¥100,000</span></div>
+<div class="stat-row"><span class="label">本月累计</span><span class="value">¥38,884</span></div>
+<div class="stat-row"><span class="label">完成进度</span><span class="value">38.88%</span></div>
 </div>
 </div>
 
 <div class="bottom-row">
-<div class="section-card"><h3>品牌销售对比</h3>
-<div class="compare-bar"><div class="bar-pk" style="width:58%">拼酷 58%</div><div class="bar-fd" style="width:42%">疯豆 42%</div></div>
-<div class="stat-row"><span class="label">拼酷销售额</span><span class="value">¥474,306</span></div>
-<div class="stat-row"><span class="label">疯豆销售额</span><span class="value">¥342,945</span></div></div>
+<div class="section-card"><h3>门店销售对比</h3>
+<div class="compare-bar"><div class="bar-pk" style="width:60%">东莞 60%</div><div class="bar-fd" style="width:40%">深圳 40%</div></div>
+<div class="stat-row"><span class="label">东莞记忆店</span><span class="value">¥717,400</span></div>
+<div class="stat-row"><span class="label">深圳怀德店</span><span class="value">¥478,396</span></div></div>
 <div class="section-card"><h3>商品销售排行TOP10</h3>
 <table class="data-table"><thead><tr><th>排名</th><th>商品</th><th>销售额</th></tr></thead>
 <tbody>
-<tr><td><span class="rank-badge">1</span></td><td>初级拼装套装</td><td>¥18,264</td></tr>
-<tr><td><span class="rank-badge">2</span></td><td>九龙九凤冠</td><td>¥15,548</td></tr>
-<tr><td><span class="rank-badge">3</span></td><td>银玥蝶冠</td><td>¥14,950</td></tr>
-<tr><td><span class="rank-badge">4</span></td><td>六福狮</td><td>¥12,903</td></tr>
-<tr><td><span class="rank-badge">5</span></td><td>狮狮如意</td><td>¥12,882</td></tr>
+<tr><td><span class="rank-badge">1</span></td><td>初级拼装套装</td><td>¥22,560</td></tr>
+<tr><td><span class="rank-badge">2</span></td><td>点翠凤冠</td><td>¥21,696</td></tr>
+<tr><td><span class="rank-badge">3</span></td><td>狮狮如意</td><td>¥19,323</td></tr>
+<tr><td><span class="rank-badge">4</span></td><td>狮运当头</td><td>¥15,933</td></tr>
+<tr><td><span class="rank-badge">5</span></td><td>九龙九凤冠</td><td>¥15,847</td></tr>
 </tbody></table>
 </div>
 <div class="section-card"><h3>个人销售业绩排名</h3>
@@ -152,7 +148,6 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 </div>
 
 <script>
-// 创建星空
 (function(){
 var s=document.getElementById('starfield');
 for(var i=0;i<150;i++){
@@ -164,9 +159,7 @@ star.style.animationDelay=Math.random()*3+'s';
 s.appendChild(star);
 }
 })();
-
-// 图表
-new Chart(document.getElementById('monthlyChart'),{type:'bar',data:{labels:['12月','1月','2月'],datasets:[{label:'营业额',data:[70876,158072,179677],backgroundColor:'rgba(0,191,255,0.8)',borderColor:'#fff',borderWidth:2,borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#87ceeb'}}},scales:{x:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb'}},y:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',callback:function(v){return '¥'+(v/1000)+'k'}}}}}});
+new Chart(document.getElementById('monthlyChart'),{type:'bar',data:{labels:['1月','2月','3月'],datasets:[{label:'营业额',data:[276103,282911,38884],backgroundColor:'rgba(0,191,255,0.8)',borderColor:'#fff',borderWidth:2,borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#87ceeb'}}},scales:{x:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb'}},y:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',callback:function(v){return '¥'+(v/1000)+'k'}}}}}});
 </script>
 </body>
 </html>
