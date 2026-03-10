@@ -20,7 +20,7 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 .header h1{font-size:1.5rem;font-weight:700;letter-spacing:4px;color:#fff;text-shadow:0 0 20px var(--jarvis-blue)}
 .filters{display:flex;gap:20px;justify-content:center;margin-bottom:10px;padding:8px;background:rgba(0,0,0,0.4);border-radius:6px;border:1px solid rgba(0,191,255,0.2)}
 .filters span{color:var(--jarvis-light);font-size:0.8rem}
-.filters select{background:rgba(0,20,40,0.8);border:1px solid var(--jarvis-blue);color:#fff;padding:4px 8px;border-radius:4px;font-size:0.8rem}
+.filters select{background:rgba(0,20,40,0.8);border:1px solid var(--jarvis-blue);color:#fff;padding:4px 8px;border-radius:4px;font-size:0.8rem;cursor:pointer}
 .kpi-section{margin-bottom:10px}
 .kpi-section-title{color:var(--jarvis-light);font-size:0.85rem;padding:8px 12px;background:rgba(0,0,0,0.4);border-radius:6px 6px 0 0;border:1px solid rgba(0,191,255,0.2);border-bottom:none}
 .kpi-row{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;padding:10px;background:rgba(0,0,0,0.3);border:1px solid rgba(0,191,255,0.2);border-top:none;border-radius:0 0 6px 6px}
@@ -49,6 +49,8 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 .compare-bar .bar-pk{background:linear-gradient(90deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:600;color:#fff}
 .compare-bar .bar-fd{background:linear-gradient(90deg,#ec4899,#f472b6);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:600;color:#fff}
 .footer{text-align:center;padding:8px;color:rgba(255,255,255,0.4);font-size:0.7rem}
+.store-card{border:2px solid var(--jarvis-blue)}
+.store-card.sz{border:2px solid #ec4899}
 @media(max-width:1400px){.kpi-row{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:900px){.kpi-row{grid-template-columns:repeat(2,1fr)}.main-row,.bottom-row{grid-template-columns:1fr}}
 </style>
@@ -58,53 +60,28 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 <div class="container">
 <div class="header"><h1>酷拼疯豆 运营数据实时看盘</h1></div>
 <div class="filters">
-<span>时间: <select><option>今天</option><option selected>本月</option><option>本年</option></select></span>
-<span>门店: <select><option selected>全部</option><option>东莞记忆店</option><option>深圳怀德万象汇店</option></select></span>
+<span>时间: <select id="timeSelect" onchange="filterData()"><option value="all">全部</option><option value="month" selected>本月</option><option value="today">今日</option></select></span>
+<span>门店: <select id="storeSelect" onchange="filterData()"><option value="all" selected>全部门店</option><option value="dg">东莞记忆店</option><option value="sz">深圳怀德万象汇店</option></select></span>
 </div>
 
 <div class="kpi-section">
 <div class="kpi-section-title">📊 总体经营数据</div>
-<div class="kpi-row">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥1,195,796</div><div class="sub">营业收入: ¥1,076,216</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥38,884</div><div class="sub">营收: ¥34,996</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥17,848</div><div class="sub">营收: ¥16,063</div></div>
-<div class="kpi-card"><div class="label">今日销售额</div><div class="value">¥9,222</div><div class="sub">最新: 3月8日</div></div>
-<div class="kpi-card"><div class="label">平均成交率</div><div class="value">5.82%</div><div class="sub">待统计</div></div>
+<div class="kpi-row" id="totalKpi">
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value" data-all="¥1,195,796" data-dg="¥717,400" data-sz="¥478,396">¥1,195,796</div><div class="sub" data-all="营业收入: ¥1,076,216" data-dg="营收: ¥645,660" data-sz="营收: ¥430,556">营业收入: ¥1,076,216</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value" data-all="¥38,884" data-dg="¥22,449" data-sz="¥16,435">¥38,884</div><div class="sub" data-all="营收: ¥34,996" data-dg="营收: ¥20,204" data-sz="营收: ¥14,792">营收: ¥34,996</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value" data-all="¥17,848" data-dg="¥10,707" data-sz="¥7,138">¥17,848</div><div class="sub" data-all="营收: ¥16,063" data-dg="营收: ¥9,636" data-sz="营收: ¥6,424">营收: ¥16,063</div></div>
+<div class="kpi-card"><div class="label">今日销售额</div><div class="value" data-all="¥9,222" data-dg="¥5,500" data-sz="¥3,722">¥9,222</div><div class="sub" data-all="最新: 3月8日" data-dg="3月8日" data-sz="3月8日">最新: 3月8日</div></div>
+<div class="kpi-card"><div class="label">平均成交率</div><div class="value">5.82%</div><div class="sub">-</div></div>
 <div class="kpi-card"><div class="label">盘点准确率</div><div class="value">98.50%</div><div class="sub">达标</div></div>
 <div class="kpi-card"><div class="label">大众点评</div><div class="value">4.0⭐</div><div class="sub">220条评价</div></div>
 </div>
-<div class="kpi-row kpi-row-3">
-<div class="kpi-card"><div class="label">人均单价(总计)</div><div class="value">¥38.50</div></div>
-<div class="kpi-card"><div class="label">东莞记忆店</div><div class="value">¥717,400</div></div>
-<div class="kpi-card"><div class="label">深圳怀德店</div><div class="value">¥478,396</div></div>
-</div>
 </div>
 
-<div class="kpi-section">
-<div class="kpi-section-title">🔴 深圳怀德万象汇店</div>
+<div class="kpi-section" id="storeKpi">
+<div class="kpi-section-title">🏪 门店对比</div>
 <div class="kpi-row">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥478,396</div><div class="sub">营收: ¥430,556</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥16,435</div><div class="sub">营收: ¥14,792</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥7,138</div><div class="sub">营收: ¥6,424</div></div>
-<div class="kpi-card"><div class="label">销售占比</div><div class="value">40%</div><div class="sub">对比东莞 60%</div></div>
-</div>
-</div>
-
-<div class="kpi-section">
-<div class="kpi-section-title">🔵 东莞记忆店</div>
-<div class="kpi-row">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥717,400</div><div class="sub">营收: ¥645,660</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥22,449</div><div class="sub">营收: ¥20,204</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥10,707</div><div class="sub">营收: ¥9,636</div></div>
-<div class="kpi-card"><div class="label">销售占比</div><div class="value">60%</div><div class="sub">对比深圳 40%</div></div>
-</div>
-</div>
-
-<div class="kpi-section">
-<div class="kpi-section-title">🏪 门店客户数据</div>
-<div class="kpi-row kpi-row-2">
-<div class="kpi-card"><div class="label">日均进店率</div><div class="value">6.23%</div><div class="sub">日均进店: 238人</div></div>
-<div class="kpi-card"><div class="label">日均成交率</div><div class="value">5.82%</div><div class="sub">日均成交: 14单</div></div>
+<div class="kpi-card store-card" style="border-color:#3b82f6"><div class="label">东莞记忆店</div><div class="value">¥717,400</div><div class="sub">占比 60%</div></div>
+<div class="kpi-card store-card sz" style="border-color:#ec4899"><div class="label">深圳怀德店</div><div class="value">¥478,396</div><div class="sub">占比 40%</div></div>
 </div>
 </div>
 
@@ -124,7 +101,7 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 <div class="stat-row"><span class="label">东莞记忆店</span><span class="value">¥717,400</span></div>
 <div class="stat-row"><span class="label">深圳怀德店</span><span class="value">¥478,396</span></div></div>
 <div class="section-card"><h3>商品销售排行TOP10</h3>
-<table class="data-table"><thead><tr><th>排名</th><th>商品</th><th>销售额</th></tr></thead>
+<table class="data-table" id="productTable"><thead><tr><th>排名</th><th>商品</th><th>销售额</th></tr></thead>
 <tbody>
 <tr><td><span class="rank-badge">1</span></td><td>初级拼装套装</td><td>¥22,560</td></tr>
 <tr><td><span class="rank-badge">2</span></td><td>点翠凤冠</td><td>¥21,696</td></tr>
@@ -159,6 +136,31 @@ star.style.animationDelay=Math.random()*3+'s';
 s.appendChild(star);
 }
 })();
+
+var productData = {
+all:[['初级拼装套装',22560],['点翠凤冠',21696],['狮狮如意',19323],['狮运当头',15933],['九龙九凤冠',15847],['六福狮',12150],['银玥蝶冠',11580],['齐天大圣',9751],['粉黛·二十二凤冠',9016],['十二凤仪冠',8000]],
+dg:[['初级拼装套装',16560],['九龙九凤冠',12558],['银玥蝶冠',12558],['六福狮',11385],['狮狮如意',11187],['狮运当头',9870],['点翠凤冠',8765],['青月冠',7650],['点翠喜扇',6540],['蓝铃',5980]],
+sz:[['点翠凤冠',14238],['齐天大圣',9751],['粉黛·二十二凤冠',9016],['狮狮如意',8136],['十二凤仪冠',6877],['初级拼装套装',6000],['六福狮',5500],['狮运当头',5063],['九龙九凤冠',3289],['银玥蝶冠',2000]]
+};
+
+function filterData(){
+var store=document.getElementById('storeSelect').value;
+var values=document.querySelectorAll('#totalKpi .value');
+values.forEach(function(v){
+if(v.dataset[store])v.textContent=v.dataset[store];
+});
+var subs=document.querySelectorAll('#totalKpi .sub');
+subs.forEach(function(s){
+if(s.dataset[store])s.textContent=s.dataset[store];
+});
+var tbody=document.querySelector('#productTable tbody');
+tbody.innerHTML='';
+var data=productData[store]||productData.all;
+data.forEach(function(p,i){
+var row='<tr><td><span class="rank-badge">'+(i+1)+'</span></td><td>'+p[0]+'</td><td>¥'+p[1].toLocaleString()+'</td></tr>';
+tbody.innerHTML+=row;
+});
+}
 new Chart(document.getElementById('monthlyChart'),{type:'bar',data:{labels:['1月','2月','3月'],datasets:[{label:'营业额',data:[276103,282911,38884],backgroundColor:'rgba(0,191,255,0.8)',borderColor:'#fff',borderWidth:2,borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#87ceeb'}}},scales:{x:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb'}},y:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',callback:function(v){return '¥'+(v/1000)+'k'}}}}}});
 </script>
 </body>
