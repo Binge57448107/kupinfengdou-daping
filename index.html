@@ -48,8 +48,6 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 .stat-row .value{color:var(--jarvis-glow);font-weight:600}
 .compare-bar{display:flex;height:24px;border-radius:4px;overflow:hidden;margin:6px 0}
 .compare-bar .bar{background:linear-gradient(90deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:600;color:#fff}
-.compare-bar .bar-pk{background:linear-gradient(90deg,#3b82f6,#60a5fa)}
-.compare-bar .bar-fd{background:linear-gradient(90deg,#ec4899,#f472b6)}
 .footer{text-align:center;padding:6px;color:rgba(255,255,255,0.4);font-size:0.6rem}
 @media(max-width:1400px){.kpi-row-7{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:900px){.kpi-row-7,.kpi-row-4,.kpi-row-3{grid-template-columns:repeat(2,1fr)}.main-row,.bottom-row{grid-template-columns:1fr}}
@@ -71,46 +69,46 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 <div class="kpi-card"><div class="label">营业额累计</div><div class="value" data-all="¥1,195,796" data-dg="¥717,400" data-sz="¥478,396">¥1,195,796</div><div class="sub" data-all="营收: ¥1,076,216" data-dg="营收: ¥645,660" data-sz="营收: ¥430,556">营收: ¥1,076,216</div></div>
 <div class="kpi-card"><div class="label">本月累计</div><div class="value" data-all="¥38,884" data-dg="¥22,449" data-sz="¥16,435">¥38,884</div><div class="sub" data-all="营收: ¥34,996" data-dg="营收: ¥20,204" data-sz="营收: ¥14,792">营收: ¥34,996</div></div>
 <div class="kpi-card"><div class="label">日平均</div><div class="value" data-all="¥17,848" data-dg="¥10,707" data-sz="¥7,138">¥17,848</div><div class="sub" data-all="营收: ¥16,063" data-dg="营收: ¥9,636" data-sz="营收: ¥6,424">营收: ¥16,063</div></div>
-<div class="kpi-card"><div class="label">平均进店率</div><div class="value">6.23%</div><div class="sub">-</div></div>
-<div class="kpi-card"><div class="label">平均成交率</div><div class="value">5.82%</div><div class="sub">拼酷: 6.15%</div></div>
-<div class="kpi-card"><div class="label">盘点准确率</div><div class="value">98.50%</div><div class="sub">达标</div></div>
-<div class="kpi-card"><div class="label">大众点评</div><div class="value">4.0⭐</div><div class="sub">220条评价</div></div>
+<div class="kpi-card"><div class="label">平均进店率</div><div class="value" data-all="6.23%" data-dg="5.80%" data-sz="6.80%">6.23%</div><div class="sub" data-all="日均238人" data-dg="日均180人" data-sz="日均58人">日均238人</div></div>
+<div class="kpi-card"><div class="label">平均成交率</div><div class="value" data-all="5.82%" data-dg="5.50%" data-sz="6.20%">5.82%</div><div class="sub" data-all="拼酷: 6.15%" data-dg="拼酷: 6.00%" data-sz="拼酷: 6.30%">拼酷: 6.15%</div></div>
+<div class="kpi-card"><div class="label">盘点准确率</div><div class="value" data-all="98.50%" data-dg="98.20%" data-sz="98.90%">98.50%</div><div class="sub">达标</div></div>
+<div class="kpi-card"><div class="label">大众点评</div><div class="value" data-all="4.0⭐" data-dg="4.2⭐" data-sz="3.8⭐">4.0⭐</div><div class="sub" data-all="220条" data-dg="150条" data-sz="70条">220条</div></div>
 </div>
 <div class="kpi-row kpi-row-3">
-<div class="kpi-card"><div class="label">人均单价(总计)</div><div class="value">¥38.50</div><div class="sub">-</div></div>
-<div class="kpi-card"><div class="label">人均单价(拼酷)</div><div class="value">¥42.30</div><div class="sub">-</div></div>
-<div class="kpi-card"><div class="label">人均单价(疯豆)</div><div class="value">¥32.80</div><div class="sub">-</div></div>
+<div class="kpi-card"><div class="label">人均单价(总计)</div><div class="value" data-all="¥38.50" data-dg="¥42.00" data-sz="¥35.00">¥38.50</div></div>
+<div class="kpi-card"><div class="label">人均单价(拼酷)</div><div class="value" data-all="¥42.30" data-dg="¥45.00" data-sz="¥39.00">¥42.30</div></div>
+<div class="kpi-card"><div class="label">人均单价(疯豆)</div><div class="value" data-all="¥32.80" data-dg="¥36.00" data-sz="¥29.00">¥32.80</div></div>
 </div>
 </div>
 
 <!-- 第二行: 疯豆品牌数据 -->
 <div class="kpi-section">
 <div class="kpi-section-title">🔴 疯豆品牌数据</div>
-<div class="kpi-row kpi-row-4">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥478,396</div><div class="sub">营收: ¥430,556</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥16,435</div><div class="sub">营收: ¥14,792</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥7,138</div><div class="sub">营收: ¥6,424</div></div>
-<div class="kpi-card"><div class="label">销售占比</div><div class="value">40%</div><div class="sub">对比拼酷 60%</div></div>
+<div class="kpi-row kpi-row-4" id="rowFeng">
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value" data-all="¥478,396" data-dg="¥0" data-sz="¥478,396">¥478,396</div><div class="sub" data-all="营收: ¥430,556" data-sz="营收: ¥430,556">营收: ¥430,556</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value" data-all="¥16,435" data-dg="¥0" data-sz="¥16,435">¥16,435</div><div class="sub" data-all="营收: ¥14,792" data-sz="营收: ¥14,792">营收: ¥14,792</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value" data-all="¥7,138" data-dg="¥0" data-sz="¥7,138">¥7,138</div><div class="sub" data-all="营收: ¥6,424" data-sz="营收: ¥6,424">营收: ¥6,424</div></div>
+<div class="kpi-card"><div class="label">销售占比</div><div class="value" data-all="40%" data-dg="0%" data-sz="100%">40%</div><div class="sub" data-all="对比拼酷 60%" data-sz="拼酷 0%">对比拼酷 60%</div></div>
 </div>
 </div>
 
 <!-- 第三行: 拼酷品牌数据 -->
 <div class="kpi-section">
 <div class="kpi-section-title">🔵 拼酷品牌数据</div>
-<div class="kpi-row kpi-row-4">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥717,400</div><div class="sub">营收: ¥645,660</div></div>
-<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥22,449</div><div class="sub">营收: ¥20,204</div></div>
-<div class="kpi-card"><div class="label">日平均</div><div class="value">¥10,707</div><div class="sub">营收: ¥9,636</div></div>
-<div class="kpi-card"><div class="label">销售占比</div><div class="value">60%</div><div class="sub">对比疯豆 40%</div></div>
+<div class="kpi-row kpi-row-4" id="rowPin">
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value" data-all="¥717,400" data-dg="¥717,400" data-sz="¥0">¥717,400</div><div class="sub" data-all="营收: ¥645,660" data-dg="营收: ¥645,660">营收: ¥645,660</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value" data-all="¥22,449" data-dg="¥22,449" data-sz="¥0">¥22,449</div><div class="sub" data-all="营收: ¥20,204" data-dg="营收: ¥20,204">营收: ¥20,204</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value" data-all="¥10,707" data-dg="¥10,707" data-sz="¥0">¥10,707</div><div class="sub" data-all="营收: ¥9,636" data-dg="营收: ¥9,636">营收: ¥9,636</div></div>
+<div class="kpi-card"><div class="label">销售占比</div><div class="value" data-all="60%" data-dg="100%" data-sz="0%">60%</div><div class="sub" data-all="对比疯豆 40%" data-dg="疯豆 0%">对比疯豆 40%</div></div>
 </div>
 </div>
 
 <!-- 第四行: 门店客户数据 -->
 <div class="kpi-section">
 <div class="kpi-section-title">🏪 门店客户数据</div>
-<div class="kpi-row kpi-row-2">
-<div class="kpi-card"><div class="label">日均进店率</div><div class="value">6.23%</div><div class="sub">日均进店: 238人</div></div>
-<div class="kpi-card"><div class="label">日均成交率</div><div class="value">5.82%</div><div class="sub">日均成交: 14单</div></div>
+<div class="kpi-row kpi-row-2" id="rowCust">
+<div class="kpi-card"><div class="label">日均进店率</div><div class="value" data-all="6.23%" data-dg="5.80%" data-sz="6.80%">6.23%</div><div class="sub" data-all="日均进店: 238人" data-dg="日均180人" data-sz="日均58人">日均进店: 238人</div></div>
+<div class="kpi-card"><div class="label">日均成交率</div><div class="value" data-all="5.82%" data-dg="5.50%" data-sz="6.20%">5.82%</div><div class="sub" data-all="日均成交: 14单" data-dg="日均10单" data-sz="日均4单">日均成交: 14单</div></div>
 </div>
 </div>
 
@@ -118,29 +116,22 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 <div class="main-row">
 <div class="section-card"><h3>月度营业额趋势</h3><div class="chart-box"><canvas id="monthlyChart"></canvas></div></div>
 <div class="section-card"><h3>门店目标完成率</h3>
-<div class="compare-bar"><div class="bar" style="width:38.88%">38.88%</div></div>
+<div class="compare-bar"><div class="bar" data-all="style=width:38.88%" data-dg="style=width:22.45%" data-sz="style=width:16.44%" id="targetBar">38.88%</div></div>
 <div class="stat-row"><span class="label">本月目标</span><span class="value">¥100,000</span></div>
-<div class="stat-row"><span class="label">本月累计</span><span class="value">¥38,884</span></div>
+<div class="stat-row"><span class="label">本月累计</span><span class="value" id="monthTarget">¥38,884</span></div>
 </div>
 </div>
 
 <div class="bottom-row">
 <div class="section-card"><h3>门店销售对比</h3>
-<div class="compare-bar"><div class="bar bar-pk" style="width:60%">东莞 60%</div><div class="bar bar-fd" style="width:40%">深圳 40%</div></div>
-<div class="stat-row"><span class="label">东莞记忆店</span><span class="value">¥717,400</span></div>
-<div class="stat-row"><span class="label">深圳怀德店</span><span class="value">¥478,396</span></div></div>
+<div class="compare-bar"><div class="bar" style="width:60%;background:linear-gradient(90deg,#3b82f6,#60a5fa)" data-all="东莞60%">东莞 60%</div><div class="bar" style="width:40%;background:linear-gradient(90deg,#ec4899,#f472b6)" data-all="深圳40%">深圳 40%</div></div>
+<div class="stat-row"><span class="label">东莞记忆店</span><span class="value" id="dgSales">¥717,400</span></div>
+<div class="stat-row"><span class="label">深圳怀德店</span><span class="value" id="szSales">¥478,396</span></div></div>
 <div class="section-card"><h3>商品销售排行TOP10</h3>
-<table class="data-table" id="productTable"><thead><tr><th>排名</th><th>商品</th><th>销售额</th></tr></thead>
-<tbody></tbody></table>
+<table class="data-table" id="product<tr><th>排名</th>Table"><thead><th>商品</th><th>销售额</th></tr></thead><tbody></tbody></table>
 </div>
 <div class="section-card"><h3>个人销售业绩排名</h3>
-<table class="data-table"><thead><tr><th>排名</th><th>姓名</th><th>本月</th><th>累计</th></tr></thead>
-<tbody>
-<tr><td><span class="rank-badge">1</span></td><td>张三</td><td>¥28,450</td><td>¥156,200</td></tr>
-<tr><td><span class="rank-badge">2</span></td><td>李四</td><td>¥24,320</td><td>¥142,800</td></tr>
-<tr><td><span class="rank-badge">3</span></td><td>王五</td><td>¥21,890</td><td>¥128,500</td></tr>
-<tr><td><span class="rank-badge">4</span></td><td>赵六</td><td>¥18,760</td><td>¥112,300</td></tr>
-</tbody></table>
+<table class="data-table" id="personTable"><thead><tr><th>排名</th><th>姓名</th><th>本月</th><th>累计</th></tr></thead><tbody></tbody></table>
 </div>
 </div>
 
@@ -166,16 +157,30 @@ dg:[['初级拼装套装',16560],['九龙九凤冠',12558],['银玥蝶冠',12558
 sz:[['点翠凤冠',14238],['齐天大圣',9751],['粉黛·二十二凤冠',9016],['狮狮如意',8136],['十二凤仪冠',6877],['初级拼装套装',6000],['六福狮',5500],['狮运当头',5063],['九龙九凤冠',3289],['银玥蝶冠',2000]]
 };
 
+var personData = {
+all:[['丁紫瑜',12000,1756],['曾朗或',11000,1774],['施冬雪',9500,1061],['张锦豪',8500,871],['刘鑫宇',4500,511],['刘芳',3500,399]],
+dg:[['丁紫瑜',12000,1756],['曾朗或',11000,1774],['刘芳',3500,399]],
+sz:[['施冬雪',9500,1061],['张锦豪',8500,871],['刘鑫宇',4500,511]]
+};
+
 function filterData(){
 var store=document.getElementById('storeSelect').value;
-document.querySelectorAll('#row1 .value').forEach(function(v){if(v.dataset[store])v.textContent=v.dataset[store]});
-document.querySelectorAll('#row1 .sub').forEach(function(s){if(s.dataset[store])s.textContent=s.dataset[store]});
+document.querySelectorAll('#row1 .value, #row1 .sub').forEach(function(el){
+var key=el.classList.contains('value')?'data-'+store:('data-'+store);
+if(el.dataset[store])el.textContent=el.dataset[store];
+});
+document.querySelectorAll('#rowFeng .value, #rowFeng .sub').forEach(function(el){if(el.dataset[store])el.textContent=el.dataset[store];});
+document.querySelectorAll('#rowPin .value, #rowPin .sub').forEach(function(el){if(el.dataset[store])el.textContent=el.dataset[store];});
+document.querySelectorAll('#rowCust .value, #rowCust .sub').forEach(function(el){if(el.dataset[store])el.textContent=el.dataset[store];});
 var tbody=document.querySelector('#productTable tbody');
 tbody.innerHTML='';
-var data=productData[store]||productData.all;
-data.forEach(function(p,i){
-tbody.innerHTML+='<tr><td><span class="rank-badge">'+(i+1)+'</span></td><td>'+p[0]+'</td><td>¥'+p[1].toLocaleString()+'</td></tr>';
-});
+var pdata=productData[store]||productData.all;
+pdata.forEach(function(p,i){tbody.innerHTML+='<tr><td><span class="rank-badge">'+(i+1)+'</span></td><td>'+p[0]+'</td><td>¥'+p[1].toLocaleString()+'</td></tr>';});
+var ptbody=document.querySelector('#personTable tbody');
+ptbody.innerHTML='';
+var perd=personData[store]||personData.all;
+perd.forEach(function(p,i){ptbody.innerHTML+='<tr><td><span class="rank-badge">'+(i+1)+'</span></td><td>'+p[0]+'</td><td>¥'+p[1].toLocaleString()+'</td><td>¥'+p[2].toLocaleString()+'</td></tr>';});
+document.getElementById('monthTarget').textContent=store==='dg'?'¥22,449':(store==='sz'?'¥16,435':'¥38,884');
 }
 filterData();
 new Chart(document.getElementById('monthlyChart'),{type:'bar',data:{labels:['1月','2月','3月'],datasets:[{label:'营业额',data:[276103,282911,38884],backgroundColor:'rgba(0,191,255,0.8)',borderColor:'#fff',borderWidth:2,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#87ceeb',font:{size:10}}},tooltip:{callbacks:{label:function(ctx){return '¥'+(ctx.raw/1000).toFixed(1)+'k'}}}},scales:{x:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',font:{size:9}}},y:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',font:{size:9},callback:function(v){return '¥'+(v/1000)+'k'}}}}}});
