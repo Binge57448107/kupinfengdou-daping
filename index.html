@@ -15,44 +15,44 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 @keyframes twinkle{0%,100%{opacity:0.3}50%{opacity:1}}
 #starfield::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 20% 80%,rgba(0,100,200,0.15) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(138,43,226,0.1) 0%,transparent 50%);animation:pulse 8s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:1}}
-.container{position:relative;z-index:1;max-width:100%;padding:10px}
-.header{text-align:center;padding:10px 0;margin-bottom:10px;background:rgba(0,0,0,0.4);border-radius:10px;border:1px solid rgba(0,191,255,0.3)}
-.header h1{font-size:1.5rem;font-weight:700;letter-spacing:4px;color:#fff;text-shadow:0 0 20px var(--jarvis-blue)}
-.filters{display:flex;gap:20px;justify-content:center;margin-bottom:10px;padding:8px;background:rgba(0,0,0,0.4);border-radius:6px;border:1px solid rgba(0,191,255,0.2)}
-.filters span{color:var(--jarvis-light);font-size:0.8rem}
-.filters select{background:rgba(0,20,40,0.8);border:1px solid var(--jarvis-blue);color:#fff;padding:4px 8px;border-radius:4px;font-size:0.8rem;cursor:pointer}
-.kpi-section{margin-bottom:10px}
-.kpi-section-title{color:var(--jarvis-light);font-size:0.85rem;padding:8px 12px;background:rgba(0,0,0,0.4);border-radius:6px 6px 0 0;border:1px solid rgba(0,191,255,0.2);border-bottom:none}
-.kpi-row{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;padding:10px;background:rgba(0,0,0,0.3);border:1px solid rgba(0,191,255,0.2);border-top:none;border-radius:0 0 6px 6px}
-.kpi-card{background:rgba(0,0,0,0.5);border-radius:8px;padding:12px 8px;border:1px solid rgba(0,191,255,0.3);text-align:center}
-.kpi-card .label{color:var(--jarvis-light);font-size:0.65rem;margin-bottom:5px}
-.kpi-card .value{font-size:1.1rem;font-weight:700;color:#fff;text-shadow:0 0 8px var(--jarvis-blue)}
-.kpi-card .sub{font-size:0.55rem;color:rgba(255,255,255,0.5);margin-top:3px}
+.container{position:relative;z-index:1;max-width:100%;padding:8px}
+.header{text-align:center;padding:8px 0;margin-bottom:8px;background:rgba(0,0,0,0.4);border-radius:8px;border:1px solid rgba(0,191,255,0.3)}
+.header h1{font-size:1.3rem;font-weight:700;letter-spacing:3px;color:#fff;text-shadow:0 0 20px var(--jarvis-blue)}
+.filters{display:flex;gap:15px;justify-content:center;margin-bottom:8px;padding:6px;background:rgba(0,0,0,0.4);border-radius:6px}
+.filters span{color:var(--jarvis-light);font-size:0.75rem}
+.filters select{background:rgba(0,20,40,0.8);border:1px solid var(--jarvis-blue);color:#fff;padding:3px 6px;border-radius:4px;font-size:0.75rem;cursor:pointer}
+.kpi-section{margin-bottom:8px}
+.kpi-section-title{color:var(--jarvis-light);font-size:0.75rem;padding:6px 10px;background:rgba(0,0,0,0.4);border-radius:6px 6px 0 0;border:1px solid rgba(0,191,255,0.2)}
+.kpi-row{display:grid;gap:6px;padding:8px;background:rgba(0,0,0,0.3);border:1px solid rgba(0,191,255,0.2);border-top:none;border-radius:0 0 6px 6px}
+.kpi-card{background:rgba(0,0,0,0.5);border-radius:6px;padding:8px 6px;border:1px solid rgba(0,191,255,0.3);text-align:center}
+.kpi-card .label{color:var(--jarvis-light);font-size:0.55rem;margin-bottom:3px}
+.kpi-card .value{font-size:0.95rem;font-weight:700;color:#fff;text-shadow:0 0 6px var(--jarvis-blue)}
+.kpi-card .sub{font-size:0.5rem;color:rgba(255,255,255,0.5);margin-top:2px}
 .kpi-row-4{grid-template-columns:repeat(4,1fr)}
 .kpi-row-3{grid-template-columns:repeat(3,1fr)}
 .kpi-row-2{grid-template-columns:repeat(2,1fr)}
-.main-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
-.section-card{background:rgba(0,0,0,0.5);border-radius:10px;padding:12px;border:1px solid rgba(0,191,255,0.2)}
-.section-card h3{color:#fff;font-size:0.85rem;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(0,191,255,0.2);display:flex;align-items:center;gap:6px}
+.kpi-row-7{grid-template-columns:repeat(7,1fr)}
+.main-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.section-card{background:rgba(0,0,0,0.5);border-radius:8px;padding:10px;border:1px solid rgba(0,191,255,0.2)}
+.section-card h3{color:#fff;font-size:0.75rem;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(0,191,255,0.2);display:flex;align-items:center;gap:4px}
 .section-card h3::before{content:'▣';color:var(--jarvis-blue)}
-.chart-box{height:200px}
-.data-table{width:100%;font-size:0.7rem;border-collapse:collapse}
-.data-table th{text-align:left;padding:8px 6px;color:var(--jarvis-light);font-weight:500;border-bottom:1px solid rgba(0,191,255,0.2)}
-.data-table td{padding:8px 6px;color:#fff;border-bottom:1px solid rgba(255,255,255,0.05)}
-.rank-badge{display:inline-block;width:18px;height:18px;background:linear-gradient(135deg,var(--jarvis-blue),var(--jarvis-glow));border-radius:50%;text-align:center;line-height:18px;font-size:0.6rem;font-weight:700;color:#000}
-.bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-.stat-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.75rem}
+.chart-box{height:160px}
+.data-table{width:100%;font-size:0.6rem;border-collapse:collapse}
+.data-table th{text-align:left;padding:6px 4px;color:var(--jarvis-light);font-weight:500;border-bottom:1px solid rgba(0,191,255,0.2)}
+.data-table td{padding:6px 4px;color:#fff;border-bottom:1px solid rgba(255,255,255,0.05)}
+.rank-badge{display:inline-block;width:16px;height:16px;background:linear-gradient(135deg,var(--jarvis-blue),var(--jarvis-glow));border-radius:50%;text-align:center;line-height:16px;font-size:0.5rem;font-weight:700;color:#000}
+.bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.stat-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.65rem}
 .stat-row:last-child{border-bottom:none}
 .stat-row .label{color:rgba(255,255,255,0.6)}
 .stat-row .value{color:var(--jarvis-glow);font-weight:600}
-.compare-bar{display:flex;height:28px;border-radius:6px;overflow:hidden;margin:8px 0}
-.compare-bar .bar-pk{background:linear-gradient(90deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:600;color:#fff}
-.compare-bar .bar-fd{background:linear-gradient(90deg,#ec4899,#f472b6);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:600;color:#fff}
-.footer{text-align:center;padding:8px;color:rgba(255,255,255,0.4);font-size:0.7rem}
-.store-card{border:2px solid var(--jarvis-blue)}
-.store-card.sz{border:2px solid #ec4899}
-@media(max-width:1400px){.kpi-row{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:900px){.kpi-row{grid-template-columns:repeat(2,1fr)}.main-row,.bottom-row{grid-template-columns:1fr}}
+.compare-bar{display:flex;height:24px;border-radius:4px;overflow:hidden;margin:6px 0}
+.compare-bar .bar{background:linear-gradient(90deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:600;color:#fff}
+.compare-bar .bar-pk{background:linear-gradient(90deg,#3b82f6,#60a5fa)}
+.compare-bar .bar-fd{background:linear-gradient(90deg,#ec4899,#f472b6)}
+.footer{text-align:center;padding:6px;color:rgba(255,255,255,0.4);font-size:0.6rem}
+@media(max-width:1400px){.kpi-row-7{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){.kpi-row-7,.kpi-row-4,.kpi-row-3{grid-template-columns:repeat(2,1fr)}.main-row,.bottom-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -60,55 +60,78 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 <div class="container">
 <div class="header"><h1>酷拼疯豆 运营数据实时看盘</h1></div>
 <div class="filters">
-<span>时间: <select id="timeSelect" onchange="filterData()"><option value="all">全部</option><option value="month" selected>本月</option><option value="today">今日</option></select></span>
+<span>时间: <select id="timeSelect"><option value="all">全部</option><option value="month" selected>本月</option><option value="today">今日</option></select></span>
 <span>门店: <select id="storeSelect" onchange="filterData()"><option value="all" selected>全部门店</option><option value="dg">东莞记忆店</option><option value="sz">深圳怀德万象汇店</option></select></span>
 </div>
 
+<!-- 第一行: 总体经营数据 -->
 <div class="kpi-section">
 <div class="kpi-section-title">📊 总体经营数据</div>
-<div class="kpi-row" id="totalKpi">
-<div class="kpi-card"><div class="label">营业额累计</div><div class="value" data-all="¥1,195,796" data-dg="¥717,400" data-sz="¥478,396">¥1,195,796</div><div class="sub" data-all="营业收入: ¥1,076,216" data-dg="营收: ¥645,660" data-sz="营收: ¥430,556">营业收入: ¥1,076,216</div></div>
+<div class="kpi-row kpi-row-7" id="row1">
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value" data-all="¥1,195,796" data-dg="¥717,400" data-sz="¥478,396">¥1,195,796</div><div class="sub" data-all="营收: ¥1,076,216" data-dg="营收: ¥645,660" data-sz="营收: ¥430,556">营收: ¥1,076,216</div></div>
 <div class="kpi-card"><div class="label">本月累计</div><div class="value" data-all="¥38,884" data-dg="¥22,449" data-sz="¥16,435">¥38,884</div><div class="sub" data-all="营收: ¥34,996" data-dg="营收: ¥20,204" data-sz="营收: ¥14,792">营收: ¥34,996</div></div>
 <div class="kpi-card"><div class="label">日平均</div><div class="value" data-all="¥17,848" data-dg="¥10,707" data-sz="¥7,138">¥17,848</div><div class="sub" data-all="营收: ¥16,063" data-dg="营收: ¥9,636" data-sz="营收: ¥6,424">营收: ¥16,063</div></div>
-<div class="kpi-card"><div class="label">今日销售额</div><div class="value" data-all="¥9,222" data-dg="¥5,500" data-sz="¥3,722">¥9,222</div><div class="sub" data-all="最新: 3月8日" data-dg="3月8日" data-sz="3月8日">最新: 3月8日</div></div>
-<div class="kpi-card"><div class="label">平均成交率</div><div class="value">5.82%</div><div class="sub">-</div></div>
+<div class="kpi-card"><div class="label">平均进店率</div><div class="value">6.23%</div><div class="sub">-</div></div>
+<div class="kpi-card"><div class="label">平均成交率</div><div class="value">5.82%</div><div class="sub">拼酷: 6.15%</div></div>
 <div class="kpi-card"><div class="label">盘点准确率</div><div class="value">98.50%</div><div class="sub">达标</div></div>
 <div class="kpi-card"><div class="label">大众点评</div><div class="value">4.0⭐</div><div class="sub">220条评价</div></div>
 </div>
-</div>
-
-<div class="kpi-section" id="storeKpi">
-<div class="kpi-section-title">🏪 门店对比</div>
-<div class="kpi-row">
-<div class="kpi-card store-card" style="border-color:#3b82f6"><div class="label">东莞记忆店</div><div class="value">¥717,400</div><div class="sub">占比 60%</div></div>
-<div class="kpi-card store-card sz" style="border-color:#ec4899"><div class="label">深圳怀德店</div><div class="value">¥478,396</div><div class="sub">占比 40%</div></div>
+<div class="kpi-row kpi-row-3">
+<div class="kpi-card"><div class="label">人均单价(总计)</div><div class="value">¥38.50</div><div class="sub">-</div></div>
+<div class="kpi-card"><div class="label">人均单价(拼酷)</div><div class="value">¥42.30</div><div class="sub">-</div></div>
+<div class="kpi-card"><div class="label">人均单价(疯豆)</div><div class="value">¥32.80</div><div class="sub">-</div></div>
 </div>
 </div>
 
+<!-- 第二行: 疯豆品牌数据 -->
+<div class="kpi-section">
+<div class="kpi-section-title">🔴 疯豆品牌数据</div>
+<div class="kpi-row kpi-row-4">
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥478,396</div><div class="sub">营收: ¥430,556</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥16,435</div><div class="sub">营收: ¥14,792</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value">¥7,138</div><div class="sub">营收: ¥6,424</div></div>
+<div class="kpi-card"><div class="label">销售占比</div><div class="value">40%</div><div class="sub">对比拼酷 60%</div></div>
+</div>
+</div>
+
+<!-- 第三行: 拼酷品牌数据 -->
+<div class="kpi-section">
+<div class="kpi-section-title">🔵 拼酷品牌数据</div>
+<div class="kpi-row kpi-row-4">
+<div class="kpi-card"><div class="label">营业额累计</div><div class="value">¥717,400</div><div class="sub">营收: ¥645,660</div></div>
+<div class="kpi-card"><div class="label">本月累计</div><div class="value">¥22,449</div><div class="sub">营收: ¥20,204</div></div>
+<div class="kpi-card"><div class="label">日平均</div><div class="value">¥10,707</div><div class="sub">营收: ¥9,636</div></div>
+<div class="kpi-card"><div class="label">销售占比</div><div class="value">60%</div><div class="sub">对比疯豆 40%</div></div>
+</div>
+</div>
+
+<!-- 第四行: 门店客户数据 -->
+<div class="kpi-section">
+<div class="kpi-section-title">🏪 门店客户数据</div>
+<div class="kpi-row kpi-row-2">
+<div class="kpi-card"><div class="label">日均进店率</div><div class="value">6.23%</div><div class="sub">日均进店: 238人</div></div>
+<div class="kpi-card"><div class="label">日均成交率</div><div class="value">5.82%</div><div class="sub">日均成交: 14单</div></div>
+</div>
+</div>
+
+<!-- 图表区域 -->
 <div class="main-row">
 <div class="section-card"><h3>月度营业额趋势</h3><div class="chart-box"><canvas id="monthlyChart"></canvas></div></div>
 <div class="section-card"><h3>门店目标完成率</h3>
-<div class="compare-bar"><div class="bar-pk" style="width:38.88%">38.88%</div></div>
+<div class="compare-bar"><div class="bar" style="width:38.88%">38.88%</div></div>
 <div class="stat-row"><span class="label">本月目标</span><span class="value">¥100,000</span></div>
 <div class="stat-row"><span class="label">本月累计</span><span class="value">¥38,884</span></div>
-<div class="stat-row"><span class="label">完成进度</span><span class="value">38.88%</span></div>
 </div>
 </div>
 
 <div class="bottom-row">
 <div class="section-card"><h3>门店销售对比</h3>
-<div class="compare-bar"><div class="bar-pk" style="width:60%">东莞 60%</div><div class="bar-fd" style="width:40%">深圳 40%</div></div>
+<div class="compare-bar"><div class="bar bar-pk" style="width:60%">东莞 60%</div><div class="bar bar-fd" style="width:40%">深圳 40%</div></div>
 <div class="stat-row"><span class="label">东莞记忆店</span><span class="value">¥717,400</span></div>
 <div class="stat-row"><span class="label">深圳怀德店</span><span class="value">¥478,396</span></div></div>
 <div class="section-card"><h3>商品销售排行TOP10</h3>
 <table class="data-table" id="productTable"><thead><tr><th>排名</th><th>商品</th><th>销售额</th></tr></thead>
-<tbody>
-<tr><td><span class="rank-badge">1</span></td><td>初级拼装套装</td><td>¥22,560</td></tr>
-<tr><td><span class="rank-badge">2</span></td><td>点翠凤冠</td><td>¥21,696</td></tr>
-<tr><td><span class="rank-badge">3</span></td><td>狮狮如意</td><td>¥19,323</td></tr>
-<tr><td><span class="rank-badge">4</span></td><td>狮运当头</td><td>¥15,933</td></tr>
-<tr><td><span class="rank-badge">5</span></td><td>九龙九凤冠</td><td>¥15,847</td></tr>
-</tbody></table>
+<tbody></tbody></table>
 </div>
 <div class="section-card"><h3>个人销售业绩排名</h3>
 <table class="data-table"><thead><tr><th>排名</th><th>姓名</th><th>本月</th><th>累计</th></tr></thead>
@@ -127,7 +150,7 @@ body{font-family:'Noto Sans SC',sans-serif;background:#050510;color:#fff;overflo
 <script>
 (function(){
 var s=document.getElementById('starfield');
-for(var i=0;i<150;i++){
+for(var i=0;i<100;i++){
 var star=document.createElement('div');
 star.className='star';
 star.style.left=Math.random()*100+'%';
@@ -145,23 +168,17 @@ sz:[['点翠凤冠',14238],['齐天大圣',9751],['粉黛·二十二凤冠',9016
 
 function filterData(){
 var store=document.getElementById('storeSelect').value;
-var values=document.querySelectorAll('#totalKpi .value');
-values.forEach(function(v){
-if(v.dataset[store])v.textContent=v.dataset[store];
-});
-var subs=document.querySelectorAll('#totalKpi .sub');
-subs.forEach(function(s){
-if(s.dataset[store])s.textContent=s.dataset[store];
-});
+document.querySelectorAll('#row1 .value').forEach(function(v){if(v.dataset[store])v.textContent=v.dataset[store]});
+document.querySelectorAll('#row1 .sub').forEach(function(s){if(s.dataset[store])s.textContent=s.dataset[store]});
 var tbody=document.querySelector('#productTable tbody');
 tbody.innerHTML='';
 var data=productData[store]||productData.all;
 data.forEach(function(p,i){
-var row='<tr><td><span class="rank-badge">'+(i+1)+'</span></td><td>'+p[0]+'</td><td>¥'+p[1].toLocaleString()+'</td></tr>';
-tbody.innerHTML+=row;
+tbody.innerHTML+='<tr><td><span class="rank-badge">'+(i+1)+'</span></td><td>'+p[0]+'</td><td>¥'+p[1].toLocaleString()+'</td></tr>';
 });
 }
-new Chart(document.getElementById('monthlyChart'),{type:'bar',data:{labels:['1月','2月','3月'],datasets:[{label:'营业额',data:[276103,282911,38884],backgroundColor:'rgba(0,191,255,0.8)',borderColor:'#fff',borderWidth:2,borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#87ceeb'}}},scales:{x:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb'}},y:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',callback:function(v){return '¥'+(v/1000)+'k'}}}}}});
+filterData();
+new Chart(document.getElementById('monthlyChart'),{type:'bar',data:{labels:['1月','2月','3月'],datasets:[{label:'营业额',data:[276103,282911,38884],backgroundColor:'rgba(0,191,255,0.8)',borderColor:'#fff',borderWidth:2,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#87ceeb',font:{size:10}}},tooltip:{callbacks:{label:function(ctx){return '¥'+(ctx.raw/1000).toFixed(1)+'k'}}}},scales:{x:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',font:{size:9}}},y:{grid:{color:'rgba(255,255,255,0.1)'},ticks:{color:'#87ceeb',font:{size:9},callback:function(v){return '¥'+(v/1000)+'k'}}}}}});
 </script>
 </body>
 </html>
